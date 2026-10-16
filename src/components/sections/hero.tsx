@@ -34,7 +34,7 @@ export function Hero() {
           </h1>
 
           <p className="hero-description rise rise-2 mx-auto mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-soft sm:text-[19px]">
-            Welcome to <strong>Aayush EV (Ayush EV)</strong> &mdash; Janakpur Dham&rsquo;s premier commercial DC fast charging station. 120 kW GB/T &amp; 80 kW CCS2 chargers for Tata, BYD, MG, Hyundai &amp; all EVs, plus high-pressure car wash and vehicle servicing.
+            Visit <strong>Aayush EV (Ayush EV)</strong> in Janakpur Dham for 120 kW GB/T &amp; 80 kW CCS2 DC charging, car washing, and vehicle servicing. Planning a trip? Rent a car or a 14-seat or 16-seat Winger from our team.
           </p>
 
           <div className="hero-actions rise rise-3 mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -47,7 +47,7 @@ export function Hero() {
               size="lg"
             >
               <PhoneIcon />
-              Call +977 9714099611
+              Call {siteData.phone}
             </Button>
             <a
               href="#calculator"
@@ -55,6 +55,7 @@ export function Hero() {
             >
               Estimate Cost &amp; Time
             </a>
+            <a href="#rentals" className="inline-flex items-center justify-center px-3 py-3 text-[14px] font-medium text-ink underline underline-offset-4">Explore vehicle rentals</a>
           </div>
         </div>
 

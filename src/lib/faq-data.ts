@@ -1,7 +1,13 @@
+import { siteData } from "./site-data";
+
 export const faqData = [
   {
+    q: "Can I rent a car or Winger from Aayush EV?",
+    a: `Yes. Car rentals and 14-seat and 16-seat Winger rentals are available through Aayush EV in Janakpur Dham. Call ${siteData.phone} with your travel date, route, and passenger count. Our team will confirm availability, rates, driver arrangements, and booking terms.`,
+  },
+  {
     q: "Where is Aayush EV (Ayush EV) charging station located in Janakpur Dham?",
-    a: "Aayush EV is located at Medical Chowk, Ramdaiya Bhawadi-1, Janakpur Dham, Dhanusha, Nepal (along the Janakpur-Dhalkebar highway corridor). You can navigate directly using Google Maps or call administration at +977 9714099611 for turn-by-turn guidance.",
+    a: `Aayush EV is located at Medical Chowk, Ramdaiya Bhawadi-1, Janakpur Dham, Dhanusha, Nepal (along the Janakpur-Dhalkebar highway corridor). You can navigate directly using Google Maps or call administration at ${siteData.phone} for turn-by-turn guidance.`,
   },
   {
     q: "What charging speeds and connector types are available at Aayush EV Janakpur?",
@@ -13,7 +19,7 @@ export const faqData = [
   },
   {
     q: "How does charging by battery percentage work?",
-    a: "Percentage-based charging is calculated based on your EV model’s battery size (kWh) and the percentage increment needed (e.g. from 20% to 80%). Call administration on +977 9714099611 to check your specific model’s flat percentage pricing.",
+    a: `Percentage-based charging is calculated based on your EV model’s battery size (kWh) and the percentage increment needed (e.g. from 20% to 80%). Call administration on ${siteData.phone} to check your specific model’s flat percentage pricing.`,
   },
   {
     q: "Which electric vehicle models are supported?",
@@ -25,7 +31,7 @@ export const faqData = [
   },
   {
     q: "What are the operating hours and can I charge in an emergency?",
-    a: "Our station operates daily with full staffing. For late-night, early morning, or emergency highway transit charging, call administration at +977 9714099611 to confirm immediate bay availability.",
+    a: `Our station operates daily with full staffing. For late-night, early morning, or emergency highway transit charging, call administration at ${siteData.phone} to confirm immediate bay availability.`,
   },
   {
     q: "Do you offer car wash and vehicle servicing alongside charging?",
@@ -41,7 +47,7 @@ export const faqData = [
   },
   {
     q: "Do I need to book a charging slot in advance?",
-    a: "Drive-ins are always welcome. However, if you are driving on a long journey from Kathmandu, Bardibas, or Birgunj, calling ahead at +977 9714099611 allows us to reserve a bay and ensure zero wait time upon your arrival.",
+    a: `Drive-ins are always welcome. However, if you are driving on a long journey from Kathmandu, Bardibas, or Birgunj, calling ahead at ${siteData.phone} allows us to reserve a bay and ensure zero wait time upon your arrival.`,
   },
   {
     q: "How long does it take to charge an electric car at Aayush EV?",

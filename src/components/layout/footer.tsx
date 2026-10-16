@@ -5,6 +5,8 @@ const explore = [
   { label: "120kW & 80kW Chargers", href: "#charging" },
   { label: "EV Cost & Time Calculator", href: "#calculator" },
   { label: "Vehicle Compatibility", href: "#compatibility" },
+  { label: "Car Washing", href: "#car-wash" },
+  { label: "Car & Winger Rentals", href: "#rentals" },
   { label: "Pricing & Per-kWh Rates", href: "#pricing" },
   { label: "Highway & Transit Routes", href: "#routes" },
   { label: "Location & Directions", href: "#location" },

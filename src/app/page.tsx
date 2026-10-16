@@ -8,6 +8,7 @@ import { HowItWorks } from "@/components/sections/how-it-works";
 import { Pricing } from "@/components/sections/pricing";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { Facilities } from "@/components/sections/facilities";
+import { VehicleServices } from "@/components/sections/vehicle-services";
 import { LocalGeoGuide } from "@/components/sections/local-geo-guide";
 import { Location } from "@/components/sections/location";
 import { FAQ } from "@/components/sections/faq";
@@ -27,6 +28,7 @@ export default function Home() {
         <Pricing />
         <WhyChooseUs />
         <Facilities />
+        <VehicleServices />
         <LocalGeoGuide />
         <Location />
         <FAQ />

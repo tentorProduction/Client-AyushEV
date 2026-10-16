@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { siteData } from "@/lib/site-data";
 
 export function GET() {
   return new ImageResponse(
@@ -88,7 +89,7 @@ export function GET() {
               color: "#ffffff",
             }}
           >
-            📞 +977 9714099611
+            📞 {siteData.phone}
           </div>
         </div>
       </div>

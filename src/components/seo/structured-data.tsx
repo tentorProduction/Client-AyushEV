@@ -83,8 +83,17 @@ export async function StructuredData() {
         currenciesAccepted: "NPR",
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "EV Charging and Vehicle Services",
+          name: "EV Charging, Car Washing and Vehicle Rentals",
           itemListElement: [
+            ...siteData.rentals.map((rental) => ({
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: rental.name,
+                description: rental.description,
+                serviceType: "Vehicle rental",
+              },
+            })),
             {
               "@type": "Offer",
               itemOffered: {

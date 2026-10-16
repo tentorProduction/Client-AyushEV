@@ -15,8 +15,7 @@ export function Contact() {
             Ready when <span className="display-italic">you</span> are.
           </h2>
           <p className="mt-6 text-[19px] leading-relaxed text-on-dark-soft">
-            Call ahead to check availability, or head straight over — the
-            chargers are {siteData.address.area}, {siteData.address.city}.
+            Call for EV charging, car washing, vehicle servicing, or car and Winger rental enquiries. Find us at {siteData.address.area}, {siteData.address.city}.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">

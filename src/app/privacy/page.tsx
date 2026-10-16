@@ -44,6 +44,9 @@ export default function Privacy() {
       <section>
         <h2>4. Google Maps & Third-Party Embeds</h2>
         <p>
+          When you tap a directions link, we request your current location with your browser&rsquo;s permission. If allowed, your coordinates are sent to Google Maps as the starting point for driving directions to Aayush EV. We do not store your coordinates on this website.
+        </p>
+        <p>
           To protect your privacy by default, our interactive map is only loaded when you explicitly click &ldquo;Load Google Maps.&rdquo; Once activated, your browser connects directly to Google&rsquo;s servers, which may process your IP address and set cookies in accordance with Google&rsquo;s Privacy Policy. You may revoke map consent at any time via the on-page toggle.
         </p>
       </section>

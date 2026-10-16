@@ -1,4 +1,5 @@
-const mapAddress = encodeURIComponent("Medical Chowk, Ramdaiya Bhawadi-1, Janakpur Dham, Dhanusha, Nepal");
+const stationCoordinates = { latitude: 26.816128, longitude: 85.949768 };
+const mapAddress = encodeURIComponent(`${stationCoordinates.latitude},${stationCoordinates.longitude}`);
 
 export interface EVModelData {
   id: string;
@@ -25,11 +26,11 @@ export const siteData = {
     "जनकपुर ईभी चार्जिङ",
     "रामदैया ईभी चार्जिङ स्टेशन",
   ],
-  tagline: "120kW DC Fast Charging • Car Wash • Vehicle Servicing",
+  tagline: "DC Fast Charging • Car Wash • Vehicle Servicing • Vehicle Rentals",
   description:
-    "Aayush EV (Ayush EV) is Janakpur Dham's premier DC Fast EV Charging Station at Medical Chowk, Ramdaiya Bhawadi-1. Equipped with 120kW GB/T & 80kW CCS2 chargers supporting 4 vehicles simultaneously, plus car wash and servicing.",
+    "Visit Aayush EV (Ayush EV) at Medical Chowk, Ramdaiya Bhawadi-1, Janakpur Dham for 120kW GB/T and 80kW CCS2 DC charging, car washing, vehicle servicing, and car or 14-seat and 16-seat Winger rentals.",
   shortDescription:
-    "Fast EV charging station in Janakpur Dham with 120kW GB/T & 80kW CCS2 DC fast chargers, car wash and vehicle servicing.",
+    "DC fast charging, car washing, vehicle servicing, and car or 14-seat and 16-seat Winger rentals in Janakpur Dham.",
   address: {
     street: "Medical Chowk",
     area: "Ramdaiya Bhawadi-1",
@@ -41,14 +42,13 @@ export const siteData = {
     full: "Medical Chowk, Ramdaiya Bhawadi-1, Janakpur Dham, Dhanusha, Nepal",
   },
   geo: {
-    latitude: 26.7865,
-    longitude: 85.9320,
+    ...stationCoordinates,
     region: "NP-P2",
     placename: "Janakpur Dham, Dhanusha, Nepal",
   },
-  phone: "+977 9714099611",
-  rawPhone: "+9779714099611",
-  whatsapp: "https://wa.me/9779714099611",
+  phone: "+977 9807860431",
+  rawPhone: "+9779807860431",
+  whatsapp: "https://wa.me/9779807860431",
   openingHours: {
     display: "Call administration for opening hours & 24/7 emergency charging",
     days: "Monday - Sunday (7 Days a week)",
@@ -96,6 +96,11 @@ export const siteData = {
     ],
     note: "Both chargers cost Rs 16.50 per kWh. Charging by battery percentage is priced according to vehicle model and battery capacity. Call administration to confirm your model’s rate before charging.",
   },
+  rentals: [
+    { id: "car", name: "Car rental", capacity: "Cars", description: "Call to discuss the car you need, your travel date, and your route." },
+    { id: "winger-14", name: "14-seat Winger", capacity: "14 seats", description: "A Winger rental option for group travel. Share your passenger count and trip details when you call." },
+    { id: "winger-16", name: "16-seat Winger", capacity: "16 seats", description: "A larger Winger option for your group. Call to confirm availability for your travel date." },
+  ],
   facilities: [
     { name: "120kW & 80kW DC Charging", icon: "charging", desc: "Ultra fast DC dual-gun charging stations" },
     { name: "Car Wash", icon: "washroom", desc: "High-pressure foam wash and exterior cleaning" },

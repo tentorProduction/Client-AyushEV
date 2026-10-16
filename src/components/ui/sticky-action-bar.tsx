@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { PhoneIcon, PinIcon } from "@/components/ui/icons";
+import { DirectionsLink } from "./directions-link";
 
 export function StickyActionBar() {
   const [visible, setVisible] = useState(false);
@@ -25,7 +26,7 @@ export function StickyActionBar() {
       className="fixed inset-x-0 bottom-0 z-40 block border-t border-hairline bg-surface/95 px-4 py-3 backdrop-blur-md transition-all duration-300 sm:hidden"
     >
       <div className="flex items-center gap-2">
-        <a
+        <DirectionsLink
           href={siteData.location.directionsUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -33,7 +34,7 @@ export function StickyActionBar() {
         >
           <PinIcon />
           <span>Directions</span>
-        </a>
+        </DirectionsLink>
 
         <a
           href={`tel:${siteData.phone}`}

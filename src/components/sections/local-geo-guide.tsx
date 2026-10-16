@@ -96,7 +96,7 @@ export function LocalGeoGuide() {
               className="w-full justify-center"
             >
               <PhoneIcon />
-              Call +977 9714099611
+              Call {siteData.phone}
             </Button>
           </div>
         </div>

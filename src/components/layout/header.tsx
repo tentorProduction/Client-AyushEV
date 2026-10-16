@@ -11,6 +11,8 @@ const links = [
   { label: "Chargers", href: "#charging" },
   { label: "Calculator", href: "#calculator" },
   { label: "Compatibility", href: "#compatibility" },
+  { label: "Car Wash", href: "#car-wash" },
+  { label: "Rentals", href: "#rentals" },
   { label: "Pricing", href: "#pricing" },
   { label: "Location", href: "#location" },
   { label: "FAQ", href: "#faq" },
@@ -88,7 +90,7 @@ export function Header() {
         />
 
         <div
-          className={`bar-row relative z-10 mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 transition-[height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`bar-row relative z-10 mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-6 transition-[height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             scrolled ? "h-14" : "h-20"
           }`}
         >
@@ -105,7 +107,7 @@ export function Header() {
               />
             </a>
 
-            <span className="hidden items-center rounded-full border border-hairline px-3 py-1.5 text-[12px] font-medium text-ink-soft xl:inline-flex">
+            <span className="hidden items-center rounded-full border border-hairline px-3 py-1.5 text-[12px] font-medium text-ink-soft xl:inline-flex min-[1440px]:hidden">
               <LiveStatus compact />
             </span>
           </div>
@@ -114,7 +116,7 @@ export function Header() {
             ref={navRef}
             aria-label="Main Navigation"
             onMouseLeave={() => setHovered(null)}
-            className="relative hidden items-center lg:flex"
+            className="relative hidden items-center min-[1440px]:flex"
           >
             <span
               aria-hidden="true"
@@ -167,7 +169,7 @@ export function Header() {
               onClick={() => setMenuOpen(true)}
               aria-label="Open navigation menu"
               aria-expanded={menuOpen}
-              className="group/menu flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-ink transition-colors duration-300 hover:bg-ink/[0.06] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink lg:hidden"
+              className="group/menu flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-ink transition-colors duration-300 hover:bg-ink/[0.06] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink min-[1440px]:hidden"
             >
               <span className="relative block h-3.5 w-[18px]">
                 <span className="absolute inset-x-0 top-1 h-px bg-current transition-[top] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/menu:top-[5px]" />

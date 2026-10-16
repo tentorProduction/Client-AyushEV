@@ -12,7 +12,7 @@ export function FAQ() {
       <SectionHeader
         label="Frequently Asked Questions"
         title="Everything you need to know."
-        description="Quick answers about charging speeds, pricing per kWh, vehicle compatibility, car wash, and location in Janakpur Dham."
+        description="Quick answers about EV charging, car washing, car and Winger rentals, and our location in Janakpur Dham."
         align="center"
       />
 

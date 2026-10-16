@@ -1,7 +1,7 @@
 # Aayush EV
 
 Customer website for Aayush EV — charging, car wash and servicing at Medical Chowk, Ramdaiya Bhawadi-1, Janakpur Dham, Dhanusha, Nepal.
-Two DC points (120 kW GB/T and 80 kW CCS2) serve up to four vehicles at once. Both cost Rs 16.50/kWh; percentage-based pricing varies by model. Administration: +977 9714099611.
+Two DC points (120 kW GB/T and 80 kW CCS2) serve up to four vehicles at once. Both cost Rs 16.50/kWh; percentage-based pricing varies by model. Car washing and car, 14-seat Winger, and 16-seat Winger rentals are available. Call +977 9807860431 for enquiries and bookings.
 
 ```bash
 npm ci
@@ -40,7 +40,7 @@ Pages render per request so each response can carry a fresh Content Security Pol
 
 With the production server running, run `npm run test:security` (or set `TEST_ORIGIN` to its address) and `npm audit` to verify browser protections and known dependency vulnerabilities. See `docs/SECURITY.md` for scope and deployment notes.
 
-Google Maps directions use the supplied street address. Confirm the map result with the owner before launch; replace the links in `site-data.ts` with a verified business pin when available. Confirm opening hours and model-specific percentage rates with administration. No email or WhatsApp account has been supplied.
+Google Maps and location metadata use the supplied station coordinates: 26.816128, 85.949768. Directions links request browser location access, then open driving directions from the visitor's coordinates to the station. Location access requires HTTPS (or localhost); if denied or unavailable, an inline message explains how to retry. Browsers manage the permission prompt and may remember a previous choice. Confirm opening hours and model-specific percentage rates with administration. No email or WhatsApp account has been supplied.
 
 ## Launch checklist
 

@@ -1,4 +1,6 @@
 import { ReactNode, ButtonHTMLAttributes } from "react";
+import { siteData } from "@/lib/site-data";
+import { DirectionsLink } from "./directions-link";
 
 type Variant = "primary" | "secondary" | "inverse" | "inverseOutline";
 type Size = "sm" | "md" | "lg";
@@ -63,6 +65,9 @@ export function Button({
   );
 
   if (href) {
+    if (href === siteData.location.directionsUrl) {
+      return <DirectionsLink className={classes}>{content}</DirectionsLink>;
+    }
     return (
       <a href={href} className={classes}>
         {content}

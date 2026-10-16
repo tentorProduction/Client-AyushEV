@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: `${siteData.businessName} — Fast EV Charging Station Janakpur Dham | 120kW DC Charger & Car Wash`,
+    default: `${siteData.businessName} | EV Charging, Car Wash & Vehicle Rentals in Janakpur`,
     template: `%s | ${siteData.businessName}`,
   },
   description: siteData.description,
@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     "Dhanusha EV charging station",
     "Janakpur-Dhalkebar highway EV charging",
     "Car wash Janakpur",
+    "Car rental Janakpur",
+    "14 seat Winger rental Janakpur",
+    "16 seat Winger rental Janakpur",
     "EV servicing Janakpur",
     "BYD charging Janakpur",
     "Tata Nexon EV charging Janakpur",
