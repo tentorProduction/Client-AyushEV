@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 import { siteData } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | Aayush EV Janakpur",
+  title: "Terms of Use",
   description: "Terms and conditions for EV charging services, rates per kWh, vehicle compatibility, car wash, and station policies at Aayush EV Janakpur Dham.",
   alternates: { canonical: "/terms" },
   openGraph: {

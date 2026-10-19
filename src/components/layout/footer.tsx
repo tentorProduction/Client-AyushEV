@@ -2,15 +2,17 @@ import { siteData } from "@/lib/site-data";
 import { Wordmark } from "@/components/ui/wordmark";
 
 const explore = [
-  { label: "120kW & 80kW Chargers", href: "#charging" },
-  { label: "EV Cost & Time Calculator", href: "#calculator" },
-  { label: "Vehicle Compatibility", href: "#compatibility" },
-  { label: "Car Washing", href: "#car-wash" },
-  { label: "Car & Winger Rentals", href: "#rentals" },
-  { label: "Pricing & Per-kWh Rates", href: "#pricing" },
-  { label: "Highway & Transit Routes", href: "#routes" },
-  { label: "Location & Directions", href: "#location" },
-  { label: "FAQ", href: "#faq" },
+  { label: "EV Charging Station Janakpur", href: "/ev-charging-janakpur" },
+  { label: "Car Wash Janakpur Dham", href: "/car-wash-janakpur" },
+  { label: "Car & Winger Rental Janakpur", href: "/car-rental-janakpur" },
+  { label: "EV Servicing & Inspection", href: "/ev-servicing-janakpur" },
+  { label: "120kW & 80kW Chargers", href: "/#charging" },
+  { label: "EV Cost & Time Calculator", href: "/#calculator" },
+  { label: "Vehicle Compatibility", href: "/#compatibility" },
+  { label: "Pricing & Per-kWh Rates", href: "/#pricing" },
+  { label: "Highway & Transit Routes", href: "/#routes" },
+  { label: "Location & Directions", href: "/#location" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export function Footer() {
@@ -51,7 +53,7 @@ export function Footer() {
               {explore.map((link) => (
                 <li key={link.href}>
                   <a
-                    href={`/${link.href}`}
+                    href={link.href}
                     className="text-[14.5px] text-ink-soft transition-colors duration-300 hover:text-ink"
                   >
                     {link.label}

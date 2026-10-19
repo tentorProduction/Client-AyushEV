@@ -14,12 +14,15 @@ import { Location } from "@/components/sections/location";
 import { FAQ } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
 import { StickyActionBar } from "@/components/ui/sticky-action-bar";
+import { PageStructuredData } from "@/components/seo/page-structured-data";
+import { faqData } from "@/lib/faq-data";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main id="main-content">
+        <PageStructuredData path="/" name="Home" faqs={faqData} />
         <Hero />
         <ChargingInfo />
         <EVCalculator />

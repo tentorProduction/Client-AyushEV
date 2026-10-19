@@ -29,6 +29,9 @@ export const siteData = {
   tagline: "DC Fast Charging • Car Wash • Vehicle Servicing • Vehicle Rentals",
   description:
     "Visit Aayush EV (Ayush EV) at Medical Chowk, Ramdaiya Bhawadi-1, Janakpur Dham for 120kW GB/T and 80kW CCS2 DC charging, car washing, vehicle servicing, and car or 14-seat and 16-seat Winger rentals.",
+  // Kept under the ~155 character limit so search results show it without truncating.
+  metaDescription:
+    "Aayush EV at Medical Chowk, Janakpur Dham has 120kW GB/T and 80kW CCS2 DC fast charging at Rs 16.50 per kWh, plus car wash, servicing and Winger rentals.",
   shortDescription:
     "DC fast charging, car washing, vehicle servicing, and car or 14-seat and 16-seat Winger rentals in Janakpur Dham.",
   address: {

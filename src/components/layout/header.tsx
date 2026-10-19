@@ -18,7 +18,11 @@ const links = [
   { label: "FAQ", href: "#faq" },
 ];
 
-export function Header() {
+export function Header({ anchorPrefix = "" }: { anchorPrefix?: string }) {
+  // On sub-pages the section anchors live on the home page, so links must point back to it.
+  const navLinks = anchorPrefix
+    ? links.map((link) => ({ ...link, href: `${anchorPrefix}${link.href}` }))
+    : links;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = useCallback(() => setMenuOpen(false), []);
@@ -127,7 +131,7 @@ export function Header() {
                 opacity: indicator.width > 0 ? 1 : 0,
               }}
             />
-            {links.map((link, index) => (
+            {navLinks.map((link, index) => (
               <a
                 key={link.href}
                 ref={(element) => {
@@ -207,7 +211,7 @@ export function Header() {
         </div>
 
         <div className="mt-6 flex flex-col">
-          {links.map((link, index) => (
+          {navLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}

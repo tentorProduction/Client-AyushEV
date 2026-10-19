@@ -1,7 +1,6 @@
 import { headers } from "next/headers";
 import { siteData } from "@/lib/site-data";
 import { siteUrl } from "@/lib/site-url";
-import { faqData } from "@/lib/faq-data";
 
 export async function StructuredData() {
   const headerList = await headers();
@@ -12,7 +11,7 @@ export async function StructuredData() {
     "@graph": [
       {
         "@type": [
-          "ElectricVehicleChargingStation",
+          "AutomotiveBusiness",
           "AutoRepair",
           "LocalBusiness",
         ],
@@ -140,18 +139,6 @@ export async function StructuredData() {
         },
       },
       {
-        "@type": "FAQPage",
-        "@id": `${siteUrl}/#faqpage`,
-        mainEntity: faqData.map((faq) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.a,
-          },
-        })),
-      },
-      {
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
@@ -159,54 +146,6 @@ export async function StructuredData() {
         alternateName: ["Ayush Ev", "Ayush EV Janakpur", "Aayush EV Nepal"],
         description: siteData.description,
         inLanguage: ["en-US", "ne-NP"],
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${siteUrl}/#breadcrumb`,
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: siteUrl,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "EV Chargers",
-            item: `${siteUrl}#charging`,
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: "Pricing",
-            item: `${siteUrl}#pricing`,
-          },
-          {
-            "@type": "ListItem",
-            position: 4,
-            name: "Calculator",
-            item: `${siteUrl}#calculator`,
-          },
-          {
-            "@type": "ListItem",
-            position: 5,
-            name: "Compatibility",
-            item: `${siteUrl}#compatibility`,
-          },
-          {
-            "@type": "ListItem",
-            position: 6,
-            name: "Location",
-            item: `${siteUrl}#location`,
-          },
-          {
-            "@type": "ListItem",
-            position: 7,
-            name: "FAQ",
-            item: `${siteUrl}#faq`,
-          },
-        ],
       },
     ],
   };

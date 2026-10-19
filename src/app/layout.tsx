@@ -27,16 +27,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",
-    languages: {
-      "en-NP": "/",
-      "ne-NP": "/",
-    },
   },
   title: {
     default: `${siteData.businessName} | EV Charging, Car Wash & Vehicle Rentals in Janakpur`,
     template: `%s | ${siteData.businessName}`,
   },
-  description: siteData.description,
+  description: siteData.metaDescription,
   keywords: [
     "Ayush Ev",
     "Aayush EV",

@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 import { siteData } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Aayush EV Charging Janakpur",
+  title: "Privacy Policy",
   description: "Privacy policy and data handling guidelines for Aayush EV charging station, website preferences, and customer enquiries.",
   alternates: { canonical: "/privacy" },
   openGraph: {

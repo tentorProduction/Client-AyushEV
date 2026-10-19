@@ -3,9 +3,18 @@ import test from "node:test";
 
 const origin = process.env.TEST_ORIGIN ?? "http://localhost:3000";
 const publicOrigin = "https://aayushevcharging.site";
+const pages = [
+  "/",
+  "/ev-charging-janakpur",
+  "/car-wash-janakpur",
+  "/car-rental-janakpur",
+  "/ev-servicing-janakpur",
+  "/privacy",
+  "/terms",
+];
 
 test("public pages have working navigation, search metadata and privacy defaults", async () => {
-  for (const path of ["/", "/privacy", "/terms"]) {
+  for (const path of pages) {
     const response = await fetch(new URL(path, origin));
     assert.equal(response.status, 200, path);
     const html = await response.text();
@@ -38,7 +47,7 @@ test("search routes, social preview and favicon are delivered", async () => {
   assert.equal(sitemap.status, 200);
   const xml = await sitemap.text();
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.deepEqual(urls.sort(), ["/", "/privacy", "/terms"].map((path) => new URL(path, publicOrigin).href).sort());
+  assert.deepEqual(urls.sort(), pages.map((path) => new URL(path, publicOrigin).href).sort());
   for (const path of ["/social-card", "/favicon-signature.png"]) {
     const response = await fetch(new URL(path, origin));
     assert.equal(response.status, 200, path);
