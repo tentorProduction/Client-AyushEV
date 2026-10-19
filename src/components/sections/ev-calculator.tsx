@@ -4,7 +4,7 @@ import { useState, useId } from "react";
 import { siteData } from "@/lib/site-data";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
-import { BoltIcon, PhoneIcon } from "@/components/ui/icons";
+import { PhoneIcon } from "@/components/ui/icons";
 
 export function EVCalculator() {
   const modelSelectId = useId();

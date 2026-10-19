@@ -32,7 +32,7 @@ The refined layout retains the original Fraunces display and Plus Jakarta Sans r
 
 ## Production handoff
 
-Run `npm ci`, `npm run lint`, and `npm run build`, then `npm start` on a Node.js host. Use Node.js 20.9 or newer. Set `SITE_URL` to the final public origin before building to generate the sitemap. Serve the public site over HTTPS and use `npm start` for production.
+Run `npm ci`, `npm run lint`, and `npm run build`, then `npm start` on a Node.js host. Use Node.js 20.9 or newer. Serve the public site over HTTPS and use `npm start` for production.
 
 The build fetches the configured Google Fonts; the resulting font files are self-hosted at runtime.
 
@@ -46,6 +46,6 @@ Google Maps and location metadata use the supplied station coordinates: 26.81612
 
 Privacy and Terms pages are linked from the footer. The site includes clear call/directions actions, FAQs, a custom 404, a transparent logo and favicon, mobile layouts, keyboard focus indicators, a skip link, reduced-motion support, page titles/descriptions, canonical URLs, a generated 1200×630 sharing image, robots.txt and a sitemap covering all public pages. The map only loads after explicit consent; its local preference can be withdrawn below the map. This also avoids loading the third-party frame on the initial visit.
 
-Set `SITE_URL` to the real public HTTPS domain **before the production build**; `.env.example` shows the development value. This controls canonical URLs, social URLs, robots and sitemap. The site is ready to configure for a domain, but no public domain has been supplied.
+The public origin is `https://aayushevcharging.site`, defined once in `src/lib/site-url.ts` for canonical URLs, social URLs, structured data, robots and sitemap. Preview and local builds also use this canonical origin. No `SITE_URL` environment variable is required. The sitemap lists the homepage, Privacy and Terms pages; in-page section anchors are not separate pages.
 
 No contact forms, payment forms or accounts are present, so there are no form submissions to test. Contact actions use the phone dialer. No visitor analytics service is enabled: configure an owner-approved analytics account and update the privacy/consent controls before adding tracking. Hosting request logs can provide operational traffic information. Legal text describes current website behavior; the owner should confirm it matches their service-record practices before publication.

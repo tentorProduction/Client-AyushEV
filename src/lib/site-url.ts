@@ -1,2 +1,2 @@
-// Set SITE_URL to the public HTTPS origin when deploying.
-export const siteUrl = new URL(process.env.SITE_URL || "http://localhost:3000").origin;
+// Keep canonical and discovery URLs on the public domain, including in previews.
+export const siteUrl = "https://aayushevcharging.site";

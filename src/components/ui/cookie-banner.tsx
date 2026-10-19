@@ -21,14 +21,18 @@ export function CookieBanner() {
   const handleAccept = () => {
     try {
       localStorage.setItem(CONSENT_KEY, "accepted");
-    } catch {}
+    } catch {
+      // Dismiss the notice even when browser storage is unavailable.
+    }
     setShow(false);
   };
 
   const handleDecline = () => {
     try {
       localStorage.setItem(CONSENT_KEY, "declined");
-    } catch {}
+    } catch {
+      // Dismiss the notice even when browser storage is unavailable.
+    }
     setShow(false);
   };
 
